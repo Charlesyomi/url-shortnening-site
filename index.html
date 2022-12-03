@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="container main-header">
+      <h1 class="visually-hidden">shortly</h1>
+      <div class="hamburger-header">
+        <img src="./images/logo.svg" alt="shortly" />
+        <button id="hamburger-toggle" class="hamburger-toggle btn btn--primary">
+          <div class="">
+            <img src="./images/icon-menu.svg" alt="" />
+          </div>
+        </button>
+      </div>
+
+      <div id="hamburger-menu" class="hamburger-menu">
+        <nav>
+          <ul class="primary-nav-links">
+            <li><a href="/">features</a></li>
+            <li><a href="/">pricing</a></li>
+            <li><a href="/">request</a></li>
+          </ul>
+        </nav>
+
+        <hr />
+
+        <div class="user-btns">
+          <button type="button" id="log-in-btn" class="btn btn--primary">
+            login
+          </button>
+          <button type="button" class="btn btn--secondary">sign up</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <div>
+          <h2 class="intro__heading">More than just shorter links</h2>
+          <p class="intro__text">
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <a href="" type="button" class="btn btn--secondary">get started</a>
+        </div>
+        <div class="img-container">
+          <img
+            src="./images/illustration-working.svg"
+            alt=""
+            class="img-container__img"
+          />
+        </div>
+      </section>
+
+      <div class="grey-bg">
+        <section class="shorten">
+          <h2 class="visually-hidden">shorten your links</h2>
+          <div class="shorten__form-container">
+            <form
+              action=""
+              id="shorten-link-form"
+              style="background-image: url('./images/bg-shorten-desktop.svg')"
+              class="shorten__form container"
+            >
+              <label for="inputLink" class="visually-hidden">link</label>
+              <input
+                type="text"
+                placeholder="Shorten a link here..."
+                name=""
+                id="inputLink"
+                class="shorten__input"
+              />
+              <input
+                type="submit"
+                value="Shorten It"
+                class="btn btn--tertiary"
+                id="shorten-btn"
+              />
+              <!-- <button type="button" class="btn btn--tertiary" id="shorten-btn">
+                Shorten It!
+              </button> -->
+            </form>
+          </div>
+          <ul class="shortened-links" id="shortened-links-list">
+            <!-- <li class="shortened-links__link-container container">
+              <a href="" class="shortened-links__original-state">
+                this was my original link</a
+              >
+              <div>
+                <a href="" class="shortened-links__shortened-state"
+                  >shortened this link</a
+                >
+                <button
+                  type="button"
+                  class="btn btn--tertiary"
+                  id="copy-shortened-link"
+                >
+                  copy
+                </button>
+              </div>
+            </li> -->
+          </ul>
+        </section>
+        <section class="container stats-dashboard">
+          <header class="stats-dashboard__header">
+            <h2>Advanced Statistics</h2>
+            <p>
+              Track how your links are performing across the web with our
+              advanced statistics dashboard.
+            </p>
+          </header>
+          <div class="stats-dashboard__box">
+            <article class="stats-dashboard__card">
+              <div class="stats-dashboard__card-img">
+                <img
+                  src="./images/icon-brand-recognition.svg"
+                  alt=""
+                  class=""
+                />
+              </div>
+              <div class="stats-dashboard__card-body">
+                <h3>Brand Recognition</h3>
+                <p>
+                  Boost your brand recognition with each click. Generic links
+                  don’t mean a thing. Branded links help instil confidence in
+                  your content.
+                </p>
+              </div>
+            </article>
+            <article class="stats-dashboard__card">
+              <div class="stats-dashboard__card-img">
+                <img src="./images/icon-detailed-records.svg" alt="" class="" />
+              </div>
+              <div class="stats-dashboard__card-body">
+                <h3>Detailed Records</h3>
+                <p>
+                  Gain insights into who is clicking your links. Knowing when
+                  and where people engage with your content helps inform better
+                  decisions.
+                </p>
+              </div>
+            </article>
+            <article class="stats-dashboard__card">
+              <div class="stats-dashboard__card-img">
+                <img
+                  src="./images/icon-fully-customizable.svg"
+                  alt=""
+                  class=""
+                />
+              </div>
+              <div class="stats-dashboard__card-body">
+                <h3>Fully Customizable</h3>
+                <p>
+                  Improve brand awareness and content discoverability through
+                  customizable links, supercharging audience engagement.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+        <section
+          class="boost"
+          style="background-image: url('./images/bg-boost-desktop.svg')"
+        >
+          <h2>Boost your links today</h2>
+          <a class="btn btn--secondary">Get Started</a>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container footer">
+        <h2 class="visually-hidden">footer</h2>
+        <img
+          src="./images/logo.svg"
+          alt=""
+          aria-hidden="true"
+          class="logo--white"
+        />
+        <section class="footer__section">
+          <h3>features</h3>
+          <ul>
+            <li><a href="">link shortening</a></li>
+            <li><a href="">branded links</a></li>
+            <li><a href="">analytics</a></li>
+          </ul>
+        </section>
+        <section class="footer__section">
+          <h3>resources</h3>
+          <ul>
+            <li><a href="">blog</a></li>
+            <li><a href="">developers</a></li>
+            <li><a href="">support</a></li>
+          </ul>
+        </section>
+        <section class="footer__section">
+          <h3>company</h3>
+          <ul>
+            <li><a href="">about</a></li>
+            <li><a href="">our team</a></li>
+            <li><a href="">careers</a></li>
+            <li><a href="">contact</a></li>
+          </ul>
+        </section>
+        <section class="footer__section">
+          <h3 class="visually-hidden">social media</h3>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-facebook.svg"
+                  alt="shortly Facebook page"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-twitter.svg"
+                  alt="shortly Twitter page"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-pinterest.svg"
+                  alt="shortly Pinterest page"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./images/icon-instagram.svg"
+                  alt="shortly Instagram page"
+              /></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- lessons learnt -->
+<!-- add headings to links by using nested lists or heading before the list -->
+<!-- best to hide labels than not have them at all -->
